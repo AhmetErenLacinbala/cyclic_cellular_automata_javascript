@@ -82,7 +82,6 @@ let resolution = 10;
 let colorNumber = 3;
 let colorArr;
 let threshold = 3;
-let eventCycle = 0;
 let newGrid;
 
 function setup(){
@@ -97,10 +96,6 @@ function setup(){
         for (let j = 0; j < rows; j++){
             grid[i][j]=floor(random(colorNumber)); 
                        
-        }
-    }
-    for (let i = 0; i < cols; i++){
-        for (let j = 0; j < rows; j++) {newGrid[i][j] = 0;
         }
     }
     frameRate(30);
@@ -140,9 +135,6 @@ function draw() {
                                            
                 }                
             }
-            if (i==7&&j==2&&eventCycle==1){
-                console.log("here");
-            }
             if (count >= threshold){
                 newGrid[i][j] = (grid[i][j]+1)%(colorNumber);
             }
@@ -152,12 +144,6 @@ function draw() {
         }
     }
     grid = newGrid.map(arr => arr.slice());   
-}
-
-function keyPressed(){
-    
-    
-
 }
   
 
