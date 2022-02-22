@@ -19,15 +19,6 @@ function makeColorArray (colorNumber){
         return arr;
 }
 
-function copyArray(arr){
-    if(arr[0] instanceof Array){
-        var new_arr = new Array(arr.length);
-        for(var i = arr.length; i--;)
-            new_arr[i] = copyArray(arr[i]);
-    }
-    else{var new_arr = arr.slice(0);}
-    return new_arr;
-}
 
 function colorforCells(colorNumber){
     colorArr=makeColorArray(colorNumber);
