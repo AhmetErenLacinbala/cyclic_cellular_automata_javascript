@@ -117,7 +117,6 @@ function draw() {
         }
     }
 
-    //console.log("before for: "+grid[control[0]][control[1]]);
 
     for (let i = 0; i < cols; i++ ){
         for (let j = 0; j < rows; j++){
